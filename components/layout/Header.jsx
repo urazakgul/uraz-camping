@@ -16,7 +16,7 @@ const Header = () => {
           <Logo />
         </div>
         <nav
-          className={`lg:static absolute top-0 left-0 lg:w-auto lg:h-auto w-full h-full lg:text-white text-black lg:bg-transparent bg-white lg:flex hidden ${
+          className={`lg:static absolute top-0 left-0 lg:w-auto lg:h-auto w-full h-full lg:text-white text-black lg:bg-transparent bg-white lg:flex hidden z-50 ${
             isMenuModal === true && "!grid place-content-center"
           }`}
         >
@@ -52,25 +52,41 @@ const Header = () => {
             </button>
           )}
         </nav>
-        <div className="flex gap-x-4 items-center">
-          <a href="#">
-            <FaUserAlt className="hover:text-primary transition-all" />
-          </a>
-          <a href="#">
-            <MdShoppingBasket className="hover:text-primary transition-all" />
-          </a>
-          <button onClick={() => setIsSearchModal(true)}>
-            <FaSearchLocation className="hover:text-primary transition-all" />
-          </button>
+        <div className="flex gap-x-4 items-center z-50">
+          {!isMenuModal && (
+            <a href="#" className={`${
+              isMenuModal ? "opacity-0 pointer-events-none" : ""
+            }`}>
+              <FaUserAlt className="hover:text-primary transition-all" />
+            </a>
+          )}
+          {!isMenuModal && (
+            <a href="#" className={`${
+              isMenuModal ? "opacity-0 pointer-events-none" : ""
+            }`}>
+              <MdShoppingBasket className="hover:text-primary transition-all" />
+            </a>
+          )}
+          {!isMenuModal && (
+            <button className={`hover:text-primary transition-all ${
+              isMenuModal ? "opacity-0 pointer-events-none" : ""
+            }`} onClick={() => setIsSearchModal(true)}>
+              <FaSearchLocation className="hover:text-primary transition-all" />
+            </button>
+          )}
           <a href="#" className="lg:inline-block hidden lg">
             <button className="btn-primary">Book Now</button>
           </a>
-          <button
-            className="lg:hidden inline-block"
-            onClick={() => setIsMenuModal(true)}
-          >
-            <RxDropdownMenu className="text-3xl hover:text-primary transition-all" />
-          </button>
+          {!isMenuModal && (
+            <button
+              className={`lg:hidden inline-block ${
+                isMenuModal ? "opacity-0 pointer-events-none" : ""
+              }`}
+              onClick={() => setIsMenuModal(true)}
+            >
+              <RxDropdownMenu className="text-3xl hover:text-primary transition-all" />
+            </button>
+          )}
         </div>
       </div>
       {isSearchModal && <Search setIsSearchModal={setIsSearchModal} />}
