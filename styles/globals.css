@@ -16,3 +16,7 @@ body {
 .btn-primary {
     @apply text-white px-[1.875rem] py-[0.5rem] rounded-3xl bg-primary cursor-pointer hover:opacity-90 transition-all;
 }
+
+.btn-secondary {
+    @apply text-white px-[1.875rem] py-[0.5rem] rounded-3xl bg-secondary cursor-pointer hover:opacity-90 transition-all;
+}

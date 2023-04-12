@@ -37,9 +37,6 @@ const Header = () => {
               <a href="">About</a>
             </li>
             <li className="px-[0.313rem] py-[0.625rem] hover:text-primary cursor-pointer">
-              <a href="">Reservation</a>
-            </li>
-            <li className="px-[0.313rem] py-[0.625rem] hover:text-primary cursor-pointer">
               <a href="">Contact</a>
             </li>
           </ul>
