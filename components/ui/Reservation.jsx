@@ -26,19 +26,6 @@ const Reservation = () => {
   })
 
   const [accommodationType, setAccommodationType] = useState("");
-  const [accommodationTypeFocused, setAccommodationTypeFocused] = useState(false);
-
-  const handleAccommodationFocus = () => {
-    setAccommodationTypeFocused(true);
-  };
-
-  const handleAccommodationBlur = () => {
-    setAccommodationTypeFocused(false);
-  };
-
-  const handleAccommodationChange = (e) => {
-    setAccommodationType(e.target.value);
-  };
 
   const inputs = [
     {
@@ -128,14 +115,8 @@ const Reservation = () => {
                     name={input.name}
                     value={accommodationType}
                     required
-                    onChange={handleAccommodationChange}
-                    onFocus={handleAccommodationFocus}
-                    onBlur={handleAccommodationBlur}
-                    className={`border p-3 h-[56px] -mt-2 ${
-                      accommodationTypeFocused
-                        ? "bg-primary border-secondary"
-                        : "border-black"
-                    }`}
+                    className="border border-primary p-3 h-[56px] -mt-2`"
+                    onChange={(e) => setAccommodationType(e.target.value)}
                   >
                     <option value="" disabled>Choose an Accommodation Type</option>
                     {input.options.map((option) => (
@@ -155,8 +136,8 @@ const Reservation = () => {
         <div className="lg:flex-1 w-full">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3199.4864937361913!2d27.358572890219197!3d36.686845802616716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14be1db0ea409baf%3A0x205c3f845c274ecc!2sKnidos%20Lighthouse!5e0!3m2!1str!2str!4v1681315755679!5m2!1str!2str"
-            width="600"
-            height="450"
+            width="100%"
+            height="100%"
             allowFullScreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"

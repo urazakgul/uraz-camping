@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import Link from "next/link";
 
 const Logo = () => {
   return (
-    <div className='text-[2rem] font-dancing font-bold'>
-        Uraz Camping
-    </div>
-  )
-}
+    <Link href="/">
+      <span className="text-[2rem] font-dancing font-bold cursor-pointer">Uraz Camping</span>
+    </Link>
+  );
+};
 
-export default Logo
+export default Logo;

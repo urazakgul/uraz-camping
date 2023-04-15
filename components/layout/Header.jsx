@@ -5,6 +5,7 @@ import { RxDropdownMenu } from "react-icons/rx";
 import { MdShoppingBasket } from "react-icons/md";
 import { MdOutlineCloseFullscreen } from "react-icons/md";
 import Search from "../ui/Search";
+import Link from "next/link";
 
 const Header = () => {
   const [isSearchModal, setIsSearchModal] = useState(false);
@@ -22,22 +23,22 @@ const Header = () => {
         >
           <ul className="flex gap-x-3 lg:flex-row flex-col items-center">
             <li className="px-[0.313rem] py-[0.625rem] hover:text-primary cursor-pointer">
-              <a href="">Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li className="px-[0.313rem] py-[0.625rem] hover:text-primary cursor-pointer">
-              <a href="">Accommodation</a>
+              <Link href="/accommodation">Accommodation</Link>
             </li>
             <li className="px-[0.313rem] py-[0.625rem] hover:text-primary cursor-pointer">
-              <a href="">Activities</a>
+              <Link href="/activities">Activities</Link>
             </li>
             <li className="px-[0.313rem] py-[0.625rem] hover:text-primary cursor-pointer">
-              <a href="">Gallery</a>
+              <Link href="/gallery">Gallery</Link>
             </li>
             <li className="px-[0.313rem] py-[0.625rem] hover:text-primary cursor-pointer">
-              <a href="">About</a>
+              <Link href="/about">About</Link>
             </li>
             <li className="px-[0.313rem] py-[0.625rem] hover:text-primary cursor-pointer">
-              <a href="">Contact</a>
+              <Link href="/reservation">Reservation</Link>
             </li>
           </ul>
           {isMenuModal && (
