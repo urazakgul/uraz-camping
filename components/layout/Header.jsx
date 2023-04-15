@@ -52,11 +52,11 @@ const Header = () => {
         </nav>
         <div className="flex gap-x-4 items-center z-50">
           {!isMenuModal && (
-            <a href="#" className={`${
+            <Link href="/auth/login" className={`${
               isMenuModal ? "opacity-0 pointer-events-none" : ""
             }`}>
               <FaUserAlt className="hover:text-primary transition-all" />
-            </a>
+            </Link>
           )}
           {!isMenuModal && (
             <a href="#" className={`${
