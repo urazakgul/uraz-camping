@@ -13,11 +13,6 @@ const CampaignItem = () => {
           <span className="text-4xl">10%</span>
           <span className="inline-block ml-[10px] text-2xl">OFF</span>
         </div>
-        <div className="flex items-center">
-          <button className="btn-secondary flex items-center gap-x-2">
-            <span className="flex-shrink-0 whitespace-nowrap">Book Now</span>
-          </button>
-        </div>
       </div>
     </div>
   );

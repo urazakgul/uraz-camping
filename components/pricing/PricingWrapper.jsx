@@ -20,8 +20,6 @@ const PricingWrapper = () => {
         <PricingItem />
         <PricingItem />
         <PricingItem />
-        <PricingItem />
-        <PricingItem />
       </div>
     </div>
   );

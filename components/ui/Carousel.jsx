@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Title from "./Title";
+import Link from "next/link";
 
 const Carousel = () => {
   const settings = {
@@ -31,9 +32,11 @@ const Carousel = () => {
             At Uraz Camping, we believe that camping is not just an activity,
             but the start of a journey filled with endless adventures.
           </p>
-          <button className="btn-primary flex justify-center mx-auto">
-            Book Now
-          </button>
+          <Link href="/reservation">
+            <button className="btn-primary flex justify-center mx-auto">
+              Book Now
+            </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -13,8 +13,8 @@ const CustomerItem = ({ imgSrc }) => {
           definitely be back!
         </p>
         <div className="flex flex-col mt-4">
-          <span className="text-lg font-weight">Our Customer</span>
-          <span className="text-sm">Istanbul, Turkey</span>
+          <span className="text-lg font-weight">Shanna V. Lovett</span>
+          <span className="text-sm">Toronto, Canada</span>
         </div>
       </div>
       <div

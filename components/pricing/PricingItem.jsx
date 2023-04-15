@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { MdShoppingBasket } from "react-icons/md";
 
 const PricingItem = () => {
   return (
@@ -16,11 +15,8 @@ const PricingItem = () => {
           FOR 2 PERSONS <br />
           +90 TL PER ADDITIONAL PERSON <br />
         </p>
-        <div className="flex flex-wrap justify-between items-center mt-10">
-          <span className="flex-shrink-0 text-2xl">200 TL</span>
-          <button className="btn-primary w-10 h-7 rounded-full text-2xl grid place-content-center">
-            <MdShoppingBasket />
-          </button>
+        <div className="text-center mt-10">
+          <span className="text-3xl">200 TL</span>
         </div>
       </div>
     </div>

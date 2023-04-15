@@ -1,14 +1,11 @@
 import { useState } from "react";
 import Logo from "../ui/Logo";
-import { FaUserAlt, FaSearchLocation } from "react-icons/fa";
+import { FaUserAlt } from "react-icons/fa";
 import { RxDropdownMenu } from "react-icons/rx";
-import { MdShoppingBasket } from "react-icons/md";
 import { MdOutlineCloseFullscreen } from "react-icons/md";
-import Search from "../ui/Search";
 import Link from "next/link";
 
 const Header = () => {
-  const [isSearchModal, setIsSearchModal] = useState(false);
   const [isMenuModal, setIsMenuModal] = useState(false);
   return (
     <div className="h-[6.25rem] bg-secondary">
@@ -52,29 +49,15 @@ const Header = () => {
         </nav>
         <div className="flex gap-x-4 items-center z-50">
           {!isMenuModal && (
-            <Link href="/auth/login" className={`${
-              isMenuModal ? "opacity-0 pointer-events-none" : ""
-            }`}>
+            <Link
+              href="/auth/login"
+              className={`${
+                isMenuModal ? "opacity-0 pointer-events-none" : ""
+              }`}
+            >
               <FaUserAlt className="hover:text-primary transition-all" />
             </Link>
           )}
-          {!isMenuModal && (
-            <a href="#" className={`${
-              isMenuModal ? "opacity-0 pointer-events-none" : ""
-            }`}>
-              <MdShoppingBasket className="hover:text-primary transition-all" />
-            </a>
-          )}
-          {!isMenuModal && (
-            <button className={`hover:text-primary transition-all ${
-              isMenuModal ? "opacity-0 pointer-events-none" : ""
-            }`} onClick={() => setIsSearchModal(true)}>
-              <FaSearchLocation className="hover:text-primary transition-all" />
-            </button>
-          )}
-          <a href="#" className="lg:inline-block hidden lg">
-            <button className="btn-primary">Book Now</button>
-          </a>
           {!isMenuModal && (
             <button
               className={`lg:hidden inline-block ${
@@ -87,7 +70,6 @@ const Header = () => {
           )}
         </div>
       </div>
-      {isSearchModal && <Search setIsSearchModal={setIsSearchModal} />}
     </div>
   );
 };
