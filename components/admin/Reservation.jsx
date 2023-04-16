@@ -1,12 +1,11 @@
-import React from "react";
 import Title from "../ui/Title";
 
-const History = () => {
+const Reservation = () => {
   return (
     <div className="lg:p-8 flex-1 lg:mt-0 mt-5">
-      <Title addClass="text-[40px] text-center">History</Title>
+      <Title addClass="text-[40px] text-center">Reservation</Title>
       <div className="overflow-x-auto w-full mt-5">
-        <table className="w-full text-sm text-center text-gray-500 min-w-[1000px]">
+        <table className="w-full text-sm text-center text-gray-500 min-w-[1000px] mb-5">
           <thead className="text-xs text-gray-400 uppercase bg-gray-700">
             <tr>
               <th scope="col" className="py-3 px-6">
@@ -22,7 +21,7 @@ const History = () => {
                 ACCOMMODATION TYPE
               </th>
               <th scope="col" className="py-3 px-6">
-                STATUS
+                ACTION
               </th>
             </tr>
           </thead>
@@ -41,8 +40,7 @@ const History = () => {
                 TENT
               </td>
               <td className="py-4 px-6 font-medium whitespace-nowrap hover:text-white">
-                ONGOING
-                {/* COMPLETED, RESERVED */}
+                <button className="btn-primary !bg-danger">Delete</button>
               </td>
             </tr>
           </tbody>
@@ -52,4 +50,4 @@ const History = () => {
   );
 };
 
-export default History;
+export default Reservation;
